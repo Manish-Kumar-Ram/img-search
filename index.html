@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Gilroy',sans-serif;
+
+        }
+        nav{
+            padding: 30px;
+        }
+        .text{
+            font-size: 2rem;
+            text-align: center;
+        }
+        .searchbar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .searchbar input{
+            width: 300px;
+            padding: 10px;
+            border: none;outline: none;
+            border-radius: 5px;
+            background-color: rgb(222, 218, 218);
+        }
+        .searchbar button{
+width: 100px;
+height: 2.5rem;
+border: none;
+background-color: orange;
+color: white;
+margin-inline: 15px;
+border-radius: 10px;
+font-size: 1.2rem;
+        }
+        #show{
+display: grid;
+justify-content: center;
+width: 80%;
+grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+margin: auto;
+gap: 20px;
+transition: all ease 0.5s;
+margin-top: 100px;
+        }
+        .card a{
+            color: black;
+            text-decoration: none;
+
+        }
+        .card img:hover{
+            transform: scale(0.8);
+        
+        }
+        #show img{
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+        }
+        @media screen and (max-width:750px ) and (min-width:450px) {
+              .searchbar button{
+                font-size: 1.2rem;
+                margin-inline: 5px;
+              }
+              
+            
+        }
+        @media  scren and (max-width:450px) {
+            .searchbar input{
+                width:90%;
+              }
+            
+        }
+        #loadmoreimg {
+            width: 100px;
+height: 2.5rem;
+border: none;
+background-color: orange;
+color: white;
+margin-inline: 15px;
+border-radius: 10px;
+font-size: 1.2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+left: 200px;
+right: 200px;
+}
+        #loadmoreimg :hover{
+            background-color: #ff9900;
+            color: red;
+        }
+        .container{
+
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <nav>
+            <div class="text">
+                <h1>Image Search App</h1>
+            </div>
+            <div class="searchbar">
+                <input type="text" placeholder="Search any Images" id="searchinput">
+                <button id="searchbtn">Search</button>
+            </div>
+        </nav>
+        <div class="showData" id="show">
+
+</div>
+<div class="loadbtn">
+    <button id="loadmoreimg">Load More</button>
+</div>
+    </div>
+</body>
+</html>
